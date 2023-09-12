@@ -13,9 +13,10 @@
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href=".//styles/nav.css">
-    <link rel="stylesheet" href=".//styles/header.css">
-    <link rel="stylesheet" href=".//styles/new-tweet.css">
+    <link rel="stylesheet" href="/styles/nav.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/new-tweet.css">
+    <link rel="stylesheet" href="/styles/tweets.css">
 
 
     <!-- External JS -->
@@ -48,6 +49,7 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="post">
@@ -58,6 +60,31 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+
+      <section class="tweet-container">
+        <article class="tweet">
+          <header>
+            <div class="profile-picture">
+              <img src="/images/profile-hex.png" alt="User's profile picture">
+            </div>
+            <div class="name">TestName</div>
+            <div class="username">@Username</div>
+          </header>
+          <section class="tweet-content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga mollitia expedita minus assumenda sint eos temporibus rem eaque quis maiores architecto pariatur veritatis, iste in! Tempora architecto eum eos mollitia?</p>
+          </section>
+          <footer>
+            <div class="posted-days-ago">
+              <p>10 days ago</p>
+            </div>
+            <div class="tweet-icons">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </footer>
+        </article>
       </section>
 
     </main>
