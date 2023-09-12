@@ -1,0 +1,12 @@
+header {
+  height: 400px;
+  width: 100%;
+  padding: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: darksalmon;
+  background-image: url(../images/45-degree-fabric-light.png);
+}
+
