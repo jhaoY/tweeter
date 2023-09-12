@@ -37,3 +37,7 @@ textarea {
 textarea:focus {
   outline: none;
 }
+
+.exceed-limit {
+  color: red
+}
