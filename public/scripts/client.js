@@ -23,8 +23,8 @@ $(document).ready(function () {
       <p>${tweet.content.text}</p>
     </section>
     <footer>
-      <div class="days-ago">
-        <p>${tweet.created_at}</p>
+      <div>
+        <time class="time-ago">${timeago.format(tweet.created_at)}</time>
       </div>
       <div class="tweet-icons">
         <i class="fa-solid fa-flag"></i>
@@ -44,7 +44,7 @@ $(document).ready(function () {
     }
   }
 
-  
+
   // POSTs /tweets when new tweet form is submitted
   $(function () {
     $('.newTweetForm').on('submit', function (event) {
@@ -53,7 +53,7 @@ $(document).ready(function () {
       $.post('/tweets', $(this).serialize())
     })
   })
-  
+
   // GETs tweets and renders them
   const loadTweets = function () {
     $.get('/tweets', function (tweets) {
@@ -63,5 +63,4 @@ $(document).ready(function () {
 
   // Calling functions to generate content on page
   loadTweets();
-
 })
