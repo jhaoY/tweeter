@@ -40,9 +40,10 @@ article.tweet footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding:0.3em;
 }
 
-.days-ago {
+.time-ago {
   font-size: 0.7em;
 }
 
