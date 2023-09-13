@@ -49,8 +49,14 @@ $(document).ready(function () {
   $(function () {
     $('.newTweetForm').on('submit', function (event) {
       event.preventDefault();
-      console.log($(this).serialize())
-      $.post('/tweets', $(this).serialize())
+      const tweetValue = $('#tweet-text').val() 
+      if (tweetValue === '') {
+        alert('Please enter a tweet!')
+      } else if (tweetValue.length > 140) {
+        alert('Tweet is too long, please ensure it is below 140 characters')
+      } else {
+        $.post('/tweets', $(this).serialize())
+      }
     })
   })
 
