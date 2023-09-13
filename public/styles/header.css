@@ -1,7 +1,7 @@
 .profile-header {
-  height: 400px;
-  width: 100%;
-  padding: 520px;
+  /* height: 520px; */
+  /* width: 100%; */
+  padding: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;

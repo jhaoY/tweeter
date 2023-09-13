@@ -1,8 +1,10 @@
 .new-tweet {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+}
+
+.new-tweet h2 {
+  align-self: center;
 }
 
 button[type="submit"] {
@@ -13,7 +15,7 @@ button[type="submit"] {
 }
 
 label {
-  font-family: ;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 .tweet-div {
@@ -29,7 +31,7 @@ label {
 textarea {
   width: 100%;
   border: none;
-  border-bottom: 5px solid #000000;
+  border-bottom: 0.15em solid #000000;
   background: transparent;
   resize: none;
 }
