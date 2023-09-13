@@ -23,7 +23,8 @@ $(document).ready(function () {
       "user": {
         "name": "Descartes",
         "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
+        "handle": "@rd"
+      },
       "content": {
         "text": "Je pense , donc je suis"
       },
@@ -32,7 +33,8 @@ $(document).ready(function () {
   ]
 
   const createTweetElement = function (tweet) {
-    $('.tweet').append(`
+    let $tweet = $(`
+    <article class="tweet">
     <header>
       <div class="profile">
         <div class="profile-picture">
@@ -55,7 +57,9 @@ $(document).ready(function () {
         <i class="fa-solid fa-heart"></i>
         </div>
       </footer>
+      </article>
     `)
+    $('.tweet-container').append($tweet);
   }
 
   const renderTweets = function (tweetArr) {
