@@ -34,7 +34,7 @@ $(document).ready(function () {
       </footer>
       </article>
     `)
-    $('.tweet-container').append($tweet);
+    $('.tweet-container').prepend($tweet);
   }
 
   //Loops through an array of tweet objects, then calls createTweetElement to generate a new <article> for each tweet
@@ -55,7 +55,9 @@ $(document).ready(function () {
       } else if (tweetValue.length > 140) {
         alert('Tweet is too long, please ensure it is below 140 characters')
       } else {
+        $('.tweet').empty();
         $.post('/tweets', $(this).serialize())
+          .then(() => loadTweets())
       }
     })
   })
