@@ -42,3 +42,8 @@ textarea:focus {
 .exceed-limit {
   color: red
 }
+
+.error-message {
+  display: none;
+  color: red;
+}
