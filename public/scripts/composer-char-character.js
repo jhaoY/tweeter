@@ -3,7 +3,7 @@ $(document).ready(function() {
   const $textarea = $('.new-tweet form textarea');
   const $counter = $('.new-tweet .counter');
 
-
+  // Checks character count, if above 140 counter turns red
   $textarea.on('input', function() {
     let inputValue = $(this).val();
     let length = inputValue.length;
