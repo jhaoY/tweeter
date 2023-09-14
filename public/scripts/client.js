@@ -61,7 +61,6 @@ $(document).ready(function () {
         $errMsg.slideDown();
       } else {
         $('.error-message').slideUp();
-        $('.tweet').empty();
         $.post('/tweets', $(this).serialize())
           .then(() => loadTweets())
       }
