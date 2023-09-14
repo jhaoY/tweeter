@@ -6,7 +6,10 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -29,6 +32,26 @@ main {
   width: 90%;
   margin: 0 auto;
   background-color: inherit;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  main {
+    width: 60%;
+    height: auto;
+    margin-top: 10rem;
+    margin-right: 5rem;
+  }
+
+  .container{
+
+  }
+
 }
 
 /*

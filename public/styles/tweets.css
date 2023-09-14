@@ -1,14 +1,14 @@
 .tweet {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 article.tweet {
   display: flex;
   flex-direction: column;
-  padding: 2.5em;
+  padding: 1.5rem;
   border-style: solid;
-  border-width: 0.2em;
-  margin-top: 1em;
+  border-width: 0.2rem;
+  margin-top: 1rem;
   font-family: 'Source Sans 3', sans-serif;
 }
 
@@ -20,7 +20,6 @@ article.tweet:hover {
 article.tweet header {
   display: flex;
   justify-content: space-between;
-  /* padding: 1em; */
 }
 
 .profile {
@@ -29,7 +28,7 @@ article.tweet header {
 }
 
 .profile-name {
-  padding-left: 0.5em;
+  padding-left: 0.5rem;
 }
 
 .profile-username {
@@ -37,22 +36,22 @@ article.tweet header {
 }
 
 .tweet-content {
-  border-bottom: 0.2em solid;
+  border-bottom: 0.2rem solid;
 }
 
 article.tweet footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding:0.3em;
+  padding:0.3rem;
 }
 
 .time-ago {
-  font-size: 0.7em;
+  font-size: 0.7rem;
 }
 
 .tweet-icons i {
-  padding: 0 0.2em;
+  padding: 0 0.2rem;
   color: darkblue
 }
 

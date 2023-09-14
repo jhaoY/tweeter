@@ -1,6 +1,7 @@
 .new-tweet {
   display: flex;
   flex-direction: column;
+  margin-top: 3rem;
 }
 
 .new-tweet h2 {
@@ -46,4 +47,10 @@ textarea:focus {
 .error-message {
   display: none;
   color: red;
+}
+
+@media only screen and (min-width: 1024px) {
+  .new-tweet {
+    margin-top: 0rem;
+  }
 }

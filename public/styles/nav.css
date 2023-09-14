@@ -22,3 +22,12 @@ nav {
   font-size: 18px;
   margin-top: 5px;
 }
+
+
+@media only screen and (max-width: 1023px) {
+  nav {
+    background-color: darksalmon;
+    background-image: url(../images/45-degree-fabric-light.png);
+    position: sticky;
+  }
+}
