@@ -50,24 +50,21 @@ $(document).ready(function () {
     $('.newTweetForm').on('submit', function (event) {
       event.preventDefault();
       const tweetValue = $('#tweet-text').val()
-      const $errMsg = $('.error-message')
-
-      $errMsg.slideUp(function() {
-        if (tweetValue === '') {
-          const $errMsg = $('.error-message').text('Whoops, looks like your tweet is empty!')
-          $errMsg.prepend('<i class="fa-solid fa-circle-exclamation" style="color: #e10e0e;"></i>')
-          $errMsg.append('<i class="fa-solid fa-circle-exclamation" style="color: #e10e0e;"></i>')
-        } else if (tweetValue.length > 140) {
-          const $errMsg = $('.error-message').text('Tweet is too long, please ensure it is below 140 characters')
-          $errMsg.prepend('<i class="fa-solid fa-circle-exclamation" style="color: #e10e0e;"></i>')
-          $errMsg.append('<i class="fa-solid fa-circle-exclamation" style="color: #e10e0e;"></i>')
-        } else {
-          $('.tweet').empty();
-          $.post('/tweets', $(this).serialize())
-            .then(() => loadTweets())
-        }
+      
+      if (tweetValue === '') {
+        const $errMsg = $('.error-message').text('Whoops, looks like your tweet is empty!')
+        $errMsg.prepend('<i class="fa-solid fa-circle-exclamation" style="color: #e10e0e;"></i>')
+        $errMsg.slideDown()
+      } else if (tweetValue.length > 140) {
+        const $errMsg = $('.error-message').text('Tweet is too long, please ensure it is below 140 characters')
+        $errMsg.prepend('<i class="fa-solid fa-circle-exclamation" style="color: #e10e0e;"></i>')
         $errMsg.slideDown();
-      })
+      } else {
+        $('.error-message').slideUp();
+        $('.tweet').empty();
+        $.post('/tweets', $(this).serialize())
+          .then(() => loadTweets())
+      }
     })
   })
 
