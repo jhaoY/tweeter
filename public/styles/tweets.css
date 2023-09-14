@@ -37,7 +37,11 @@ article.tweet header {
 
 .tweet-content {
   border-bottom: 0.2rem solid;
-  /* padding: 0rem 1rem; */
+}
+
+.tweet-content p {
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 article.tweet footer {
