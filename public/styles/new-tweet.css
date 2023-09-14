@@ -4,10 +4,6 @@
   margin-top: 3rem;
 }
 
-.new-tweet h2 {
-  align-self: center;
-}
-
 button[type="submit"] {
   font-family: Bungee;
   background-color: #4056A1;
@@ -16,6 +12,7 @@ button[type="submit"] {
 
 label {
   font-family: 'Source Sans 3', sans-serif;
+  font-weight: bold;
 }
 
 .tweet-div {

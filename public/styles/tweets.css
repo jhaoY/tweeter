@@ -37,17 +37,18 @@ article.tweet header {
 
 .tweet-content {
   border-bottom: 0.2rem solid;
+  /* padding: 0rem 1rem; */
 }
 
 article.tweet footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding:0.3rem;
+  padding: 1rem 0;
 }
 
 .time-ago {
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 
 .tweet-icons i {
