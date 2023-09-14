@@ -13,7 +13,7 @@ $(document).ready(function() {
     if (length > 140) {
       $counter.addClass('exceed-limit');
     } else {
-      $counter.removeClass('remove-limit');
+      $counter.removeClass('exceed-limit');
     }
   })
 
