@@ -61,8 +61,18 @@ $(document).ready(function () {
         $errMsg.slideDown();
       } else {
         $('.error-message').slideUp();
+        $('.tweet-container').empty();
         $.post('/tweets', $(this).serialize())
-          .then(() => loadTweets());
+          .then(() => {
+            loadTweets()
+            $('#tweet-text').val('')
+            $('.counter').val('140')
+          })
+          .catch ((error) => {
+            const $errMsg = $('.error-message').text('Something went wrong!')
+            $errMsg.prepend('<i class="fa-solid fa-circle-exclamation" style="color: #e10e0e;"></i>');
+            $errMsg.slideDown();
+          })
       }
     })
   })
